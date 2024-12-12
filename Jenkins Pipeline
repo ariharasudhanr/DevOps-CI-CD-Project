@@ -1,48 +1,49 @@
 pipeline {
     agent any
     stages {
-        stage("checkout") {
+        stage("Checkout") {
             steps {
-                git 'https://github.com/ariharasudhanr/DevOps.git'
+                git 'https://github.com/ariharasudhanr/DevOps-CI-CD.git'
             }
         }
-        stage("copy files from Jenkins to Ansible & K8s") {
+        stage("Copy files from Jenkins to Ansible & K8s") {
             steps {
-                sh 'scp /var/lib/jenkins/workspace/devops/index.html ubuntu@172.31.8.67:/home/ubuntu/'
-                sh 'scp /var/lib/jenkins/workspace/devops/Dockerfile ubuntu@172.31.8.67:/home/ubuntu/'
-                sh 'scp /var/lib/jenkins/workspace/devops/ansible.yml ubuntu@172.31.8.67:/home/ubuntu/'
-                sh 'scp /var/lib/jenkins/workspace/devops/deployment.yml ubuntu@172.31.10.247:/home/ubuntu/'
-                sh 'scp /var/lib/jenkins/workspace/devops/service.yml ubuntu@172.31.10.247:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/registers/index.html ubuntu@10.0.1.182:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/registers/Dockerfile ubuntu@10.0.1.182:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/registers/ansible.yml ubuntu@10.0.1.182:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/registers/deployment.yml ubuntu@10.0.1.246:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/registers/service.yml ubuntu@10.0.1.246:/home/ubuntu/'
             }
         }
-        stage("create Docker image from Dockerfile") {
+        stage("Create Docker image from Dockerfile") {
             steps {
-                sh 'ssh ubuntu@172.31.8.67 cd /home/ubuntu/'
-                sh 'ssh ubuntu@172.31.8.67 docker image build -t ariharasudhanr/$JOB_NAME:v1.$BUILD_ID .'
-                sh 'ssh ubuntu@172.31.8.67 docker image build -t ariharasudhanr/$JOB_NAME:latest .'
+                sh 'ssh ubuntu@10.0.1.182 cd /home/ubuntu/'
+                sh 'ssh ubuntu@10.0.1.182 docker image build -t ariharasudhanr/$JOB_NAME:v1.$BUILD_ID .'
+                sh 'ssh ubuntu@10.0.1.182 docker image build -t ariharasudhanr/$JOB_NAME:latest .'
             }
         }
-        stage("push image to DockerHub") {
+        stage("Push Docker image to DockerHub") {
             steps {
-                withCredentials([string(credentialsId: 'Dockerhub', variable: 'dockerhub_password')]) {
-                    sh 'ssh ubuntu@172.31.8.67 docker login -u ariharasudhanr -p ${dockerhub_password}'
-                    sh 'ssh ubuntu@172.31.8.67 docker image push ariharasudhanr/$JOB_NAME:v1.$BUILD_ID'
-                    sh 'ssh ubuntu@172.31.8.67 docker image push ariharasudhanr/$JOB_NAME:latest'
+                withCredentials([string(credentialsId: 'DockerHub', variable: 'docker_password')]) {
+                    sh 'ssh ubuntu@10.0.1.182 docker login -u ariharasudhanr -p ${docker_password}'
+                    sh 'ssh ubuntu@10.0.1.182 docker image push ariharasudhanr/$JOB_NAME:v1.$BUILD_ID'
+                    sh 'ssh ubuntu@10.0.1.182 docker image push ariharasudhanr/$JOB_NAME:latest'
                 }
             }
         }
-        stage("prune Docker images") {
+        stage("Prune Docker images") {
             steps {
-                sh 'ssh ubuntu@172.31.8.67 docker image prune -af'
-                sh 'ssh ubuntu@172.31.8.67 docker logout'
+                sh 'ssh ubuntu@10.0.1.182 docker image prune -af'
+                sh 'ssh ubuntu@10.0.1.182 docker logout'
             }
         }
-        stage("execute K8s from Ansible") {
+        stage("Execute K8s via Ansible") {
             steps {
-                sh 'ssh ubuntu@172.31.8.67 cd /home/ubuntu'
-                sh 'ssh ubuntu@172.31.8.67 ansible-playbook ansible.yml'
+                sh 'ssh ubuntu@10.0.1.182 cd /home/ubuntu'
+                sh 'ssh ubuntu@10.0.1.182 ansible-playbook ansible.yml'
             }
         }
+       
     }
     post {
         always {
