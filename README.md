@@ -10,7 +10,7 @@
 
 ✅ Infrastructure setup powered by Terraform to provision AWS VPCs as code.
 
-<br /> <img align="right" width="450" height="300" src="https://github.com/user-attachments/assets/2b317c12-d5a2-4b16-bc52-eca7bb2c30fc"> <br />
+<br /> <img align="center" width="450" height="300" src="https://github.com/user-attachments/assets/2b317c12-d5a2-4b16-bc52-eca7bb2c30fc"> <br />
 
 📋 Pipeline Workflow Overview:
 1️⃣ Git Checkout: Pulls the latest code from the repository.
