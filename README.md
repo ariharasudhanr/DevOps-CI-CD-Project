@@ -19,6 +19,16 @@
 
 <br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/8a5b1287-abca-4905-912a-4790e950a2d4"> <br />
 
+2️⃣ Jenkins Build: Automates builds and integrates seamlessly with the pipeline.
+
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/963e194e-d479-48fe-953b-89b84bc62e11"> <br />
+
+3️⃣ Ansible Configuration: Executes K8's YAML files declaratively for smooth deployment.
+
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/963e194e-d479-48fe-953b-89b84bc62e11"> <br />
+
+
+
 
 
 
