@@ -41,6 +41,8 @@
 
 <br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/ad57e157-21f4-4e1b-9e84-03b1a823d1aa"> <br />
 
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/8933790e-4fcd-40ae-9cd2-3a9a107172e3"> <br />
+
 7️⃣ Monitoring: <br />
 
 🔸 Prometheus tracks performance metrics (e.g., CPU utilization).
