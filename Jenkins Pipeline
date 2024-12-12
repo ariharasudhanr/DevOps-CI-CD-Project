@@ -1,0 +1,80 @@
+pipeline {
+    agent any
+    stages {
+        stage("checkout") {
+            steps {
+                git 'https://github.com/ariharasudhanr/DevOps.git'
+            }
+        }
+        stage("copy files from Jenkins to Ansible & K8s") {
+            steps {
+                sh 'scp /var/lib/jenkins/workspace/devops/index.html ubuntu@172.31.8.67:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/devops/Dockerfile ubuntu@172.31.8.67:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/devops/ansible.yml ubuntu@172.31.8.67:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/devops/deployment.yml ubuntu@172.31.10.247:/home/ubuntu/'
+                sh 'scp /var/lib/jenkins/workspace/devops/service.yml ubuntu@172.31.10.247:/home/ubuntu/'
+            }
+        }
+        stage("create Docker image from Dockerfile") {
+            steps {
+                sh 'ssh ubuntu@172.31.8.67 cd /home/ubuntu/'
+                sh 'ssh ubuntu@172.31.8.67 docker image build -t ariharasudhanr/$JOB_NAME:v1.$BUILD_ID .'
+                sh 'ssh ubuntu@172.31.8.67 docker image build -t ariharasudhanr/$JOB_NAME:latest .'
+            }
+        }
+        stage("push image to DockerHub") {
+            steps {
+                withCredentials([string(credentialsId: 'Dockerhub', variable: 'dockerhub_password')]) {
+                    sh 'ssh ubuntu@172.31.8.67 docker login -u ariharasudhanr -p ${dockerhub_password}'
+                    sh 'ssh ubuntu@172.31.8.67 docker image push ariharasudhanr/$JOB_NAME:v1.$BUILD_ID'
+                    sh 'ssh ubuntu@172.31.8.67 docker image push ariharasudhanr/$JOB_NAME:latest'
+                }
+            }
+        }
+        stage("prune Docker images") {
+            steps {
+                sh 'ssh ubuntu@172.31.8.67 docker image prune -af'
+                sh 'ssh ubuntu@172.31.8.67 docker logout'
+            }
+        }
+        stage("execute K8s from Ansible") {
+            steps {
+                sh 'ssh ubuntu@172.31.8.67 cd /home/ubuntu'
+                sh 'ssh ubuntu@172.31.8.67 ansible-playbook ansible.yml'
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                def jobName = env.JOB_NAME
+                def buildNumber = env.BUILD_NUMBER
+                def pipelineStatus = currentBuild.result ?: 'SUCCESS'
+                def bannerColor = pipelineStatus.toUpperCase() == 'SUCCESS' ? 'green' : 'red'
+
+                def body = """
+                    <html>
+                    <body>
+                    <div style="border: 4px solid ${bannerColor}; padding: 10px;">
+                    <h2>${jobName} - Build ${buildNumber}</h2>
+                    <div style="background-color: ${bannerColor}; padding: 10px;">
+                    <h3 style="color: white;">Pipeline Status: ${pipelineStatus.toUpperCase()}</h3>
+                    </div>
+                    <p>Check the <a href="${BUILD_URL}">console output</a>.</p>
+                    </div>
+                    </body>
+                    </html>
+                """
+
+                emailext (
+                    subject: "${jobName} - Build ${buildNumber} - ${pipelineStatus.toUpperCase()}",
+                    body: body,
+                    to: 'ariharasudhanr1@gmail.com',
+                    from: 'jenkins@example.com',
+                    replyTo: 'jenkins@example.com',
+                    mimeType: 'text/html'
+                )
+            }
+        }
+    }
+}
