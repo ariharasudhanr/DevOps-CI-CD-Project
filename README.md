@@ -7,6 +7,6 @@
 ✅ Scalable and highly available architecture using Kubernetes and DockerHub.
 
 Terraform: Infrastructure-as-Code(IaC) for provision of AWS VPC resource
-<img align="left" width="450" height="300" src="https://github.com/user-attachments/assets/a76f1d7a-dfa8-4a57-bb60-62c93158df2f"
+<img align="left" width="450" height="300" src=![WhatsApp Image 2024-12-12 at 9 07 39 PM](https://github.com/user-attachments/assets/a76f1d7a-dfa8-4a57-bb60-62c93158df2f)
 ">
 
