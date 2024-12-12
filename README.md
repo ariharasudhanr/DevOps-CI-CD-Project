@@ -1,6 +1,6 @@
  Excited to present my DevOps End-to-End Automated Production-Grade CI/CD Pipeline for seamless application delivery and proactive monitoring! 🌟✨
 
- <br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/dc338679-3c87-4856-83d4-15b8a0c1501e"> <br />
+ <br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/614b6762-46c2-4c9f-8b1d-dccd127336d2"> <br />
  
 💡 Highlights:
 
@@ -12,7 +12,7 @@
 
 ✅ Infrastructure setup powered by Terraform to provision AWS VPCs as code.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/614b6762-46c2-4c9f-8b1d-dccd127336d2"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/f431735f-e6fc-471b-ba38-b0f39b06faa6"> <br />
 
 
 <br /> 📋 Pipeline Workflow Overview: <br />
