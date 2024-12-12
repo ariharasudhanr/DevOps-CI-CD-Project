@@ -1,0 +1,27 @@
+#blackbox exporter
+- job_name: 'blackbox'
+    metrics_path: /probe
+    params:
+      module: [http_2xx] # Look for a HTTP 200 response.
+    static_configs:
+      - targets:
+        - http://prometheus.io # Target to probe with HTTP.
+        - http://18.221.152.177:31100 # Target to probe with HTTP on port 31100.
+    relabel_configs:
+    - source_labels: [__address__]
+      target_label: __param_target
+    - source_labels: [__param_target]
+      target_label: instance
+    - target_label: __address__
+      replacement: 3.21.52.172:9115 # The Blackbox exporter's real hostname:port.
+
+
+#node exporter
+- job_name: 'node_exporter'
+    static_configs:
+      - targets: ['18.119.165.85:9100']
+
+  - job_name: 'jenkins'
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['18.119.165.85:8080']  
