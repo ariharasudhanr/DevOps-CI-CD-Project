@@ -27,7 +27,21 @@
 
 <br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
 
+4️⃣ Docker Image Creation: Packages applications into reusable Docker images.
 
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+
+5️⃣ Push to DockerHub: Provides centralized storage for container images.
+
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+
+6️⃣ Kubernetes Deployment: Deploys applications for high availability and scalability.
+
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+
+7️⃣ Monitoring: <br />
+
+🔸 Prometheus tracks performance metrics (e.g., CPU utilization).
 
 
 
