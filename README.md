@@ -41,7 +41,7 @@
 
 <br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/ad57e157-21f4-4e1b-9e84-03b1a823d1aa"> <br />
 
-<br /> <img align="center" width="850" height="500" src="https://github.com/user-attachments/assets/db98d61a-dd26-4462-9dcf-c50b72d6c7fe"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/db98d61a-dd26-4462-9dcf-c50b72d6c7fe"> <br />
 
 7️⃣ Monitoring: <br />
 
