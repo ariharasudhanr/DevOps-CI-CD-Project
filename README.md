@@ -25,7 +25,7 @@
 
 3️⃣ Ansible Configuration: Executes K8's YAML files declaratively for smooth deployment.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/963e194e-d479-48fe-953b-89b84bc62e11"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
 
 
 
