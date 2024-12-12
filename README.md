@@ -1,4 +1,6 @@
  Excited to present my DevOps End-to-End Automated Production-Grade CI/CD Pipeline for seamless application delivery and proactive monitoring! 🌟✨
+
+ <br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/dc338679-3c87-4856-83d4-15b8a0c1501e"> <br />
  
 💡 Highlights:
 
@@ -10,7 +12,7 @@
 
 ✅ Infrastructure setup powered by Terraform to provision AWS VPCs as code.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/2b317c12-d5a2-4b16-bc52-eca7bb2c30fc"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/614b6762-46c2-4c9f-8b1d-dccd127336d2"> <br />
 
 
 <br /> 📋 Pipeline Workflow Overview: <br />
@@ -29,33 +31,33 @@
 
 4️⃣ Docker Image Creation: Packages applications into reusable Docker images.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/f7d24c6d-2eb3-4f64-a579-869593ca8659"> <br />
 
 5️⃣ Push to DockerHub: Provides centralized storage for container images.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/aad733c1-6c1b-4bba-bc37-1e1c12af759d"> <br />
 
 6️⃣ Kubernetes Deployment: Deploys applications for high availability and scalability.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/ad57e157-21f4-4e1b-9e84-03b1a823d1aa"> <br />
 
 7️⃣ Monitoring: <br />
 
 🔸 Prometheus tracks performance metrics (e.g., CPU utilization).
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/9c11a1b4-dbc2-4eeb-9269-6fdbbe7ce8d7"> <br />
 
 🔸 Grafana visualizes data and dashboards for quick insights.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/3aa9bd7d-ebbc-4b6a-9f6d-66b5b6b0014b"> <br />
 
 🔸 Splunk provides comprehensive log analytics.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/54c03f9f-f6d8-4031-baeb-7bf6fbd71d44"> <br />
 
 8️⃣ Alerting: Sends email notifications for CPU utilization over 20%, ensuring proactive responses to issues.
 
-<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/dc338679-3c87-4856-83d4-15b8a0c1501e"> <br />
 
 🌟 Why This Pipeline is Game-Changing:
 🔥 Automation-Driven: Reduces manual intervention, enabling faster delivery.
