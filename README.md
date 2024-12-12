@@ -43,6 +43,28 @@
 
 🔸 Prometheus tracks performance metrics (e.g., CPU utilization).
 
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+
+🔸 Grafana visualizes data and dashboards for quick insights.
+
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+
+🔸 Splunk provides comprehensive log analytics.
+
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+
+8️⃣ Alerting: Sends email notifications for CPU utilization over 20%, ensuring proactive responses to issues.
+
+<br /> <img align="center" width="900" height="500" src="https://github.com/user-attachments/assets/844d4677-f244-4a08-bdb7-1e46768a0ecd"> <br />
+
+🌟 Why This Pipeline is Game-Changing:
+🔥 Automation-Driven: Reduces manual intervention, enabling faster delivery.
+📊 Proactive Monitoring: Prevents downtime with real-time alerts and metrics.
+⚡ Scalable and Robust: Designed to handle modern workloads seamlessly.
+
+🙌 Pushing the boundaries of DevOps innovation with this pipeline! Ready to tackle bigger challenges in the DevOps world and elevate efficiency to new heights! 🚀💪
+
+
 
 
 
