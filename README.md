@@ -12,7 +12,7 @@
 
 <br /> <img align="right" width="450" height="300" src="https://github.com/user-attachments/assets/2b317c12-d5a2-4b16-bc52-eca7bb2c30fc"> <br />
 
-<br /> 📋 Pipeline Workflow Overview: <br /> 
+📋 Pipeline Workflow Overview:
 1️⃣ Git Checkout: Pulls the latest code from the repository.
 <img align="center" width="600" height="400" src="https://github.com/user-attachments/assets/8a5b1287-abca-4905-912a-4790e950a2d4">
 
