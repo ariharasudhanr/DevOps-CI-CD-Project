@@ -2,7 +2,7 @@
 [smtp]
 enabled = true
 host = smtp.gmail.com:587
-user = hariharasudhanr01@gmail.com
+user = ariharasudhanr1@gmail.com
 password = app_password
 from_address = ariharasudhanr1@gmail.com
 from_name = Grafana Alerts
